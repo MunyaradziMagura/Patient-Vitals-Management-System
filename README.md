@@ -1,0 +1,2 @@
+# Patient Vitals Management System
+ , you have been tasked by your client to complete a patient management system. An increase in the occurrences of diseases once thought fictional (Greyscale, Simian Flu, and the dreaded Boneitis) have made this project of utmost urgency. The patient management system should record patient vitals (body temperature, blood pressure, heart rate, and respiratory rate) and report alerts for concerning results dependent on the disease they have.
