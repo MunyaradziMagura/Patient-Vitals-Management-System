@@ -251,4 +251,127 @@ m1=0..1
 has v</panel_attributes>
     <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
   </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>654</x>
+      <y>384</y>
+      <w>78</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>110.0;10.0;110.0;90.0;10.0;90.0;10.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>588</x>
+      <y>870</y>
+      <w>126</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>PatientTextDatabase
+--
+Responsibilities
+-- Stores patient data</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>642</x>
+      <y>816</y>
+      <w>48</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+uses v</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>588</x>
+      <y>708</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>PatientFileLoader
+--
+
+--
+
+--
+Responsibilities
+-- Load data from file</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>642</x>
+      <y>654</y>
+      <w>18</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>660</x>
+      <y>672</y>
+      <w>84</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Adapter Pattern
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>588</x>
+      <y>546</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>FileLoaderAdapter
+--
+
+--
+
+--
+Responsibilities
+-- adapts patientFileLoader to 
+AbstractPatientDatabaseLoader</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>816</x>
+      <y>654</y>
+      <w>48</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+uses v</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>762</x>
+      <y>708</y>
+      <w>126</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>PatientDatabaseSubsystem
+--
+Responsibilities
+-- Stores patient data</panel_attributes>
+    <additional_attributes/>
+  </element>
 </diagram>
