@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1110</x>
+      <y>276</y>
+      <w>126</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>PatientManagementSystem
+--
+
+--
++ PatientManagementSystem()
++ ~PatientManagementSystem()
++ init()
++ run()
++ addVitalsRecord()
++ printWelcomeMessage()
++ printMainMenu()
++ printPatients()
+--
+Responsibilities
+-- Resp1
+*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1470</x>
+      <y>276</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>Patient
+--
+# _diseases:list&lt;string&gt;
+--
+
+--
+Responsibilities
+-- Resp1
+*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1230</x>
+      <y>312</y>
+      <w>252</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1 
+m2=0..*</panel_attributes>
+    <additional_attributes>10.0;10.0;400.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1470</x>
+      <y>444</y>
+      <w>126</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>Vitals
+--
+# _bodyTemperature:float
+# _bloodPressure:int
+# _heartRate:int
+# _respiratoryRate:int
+--
++ getVitals(vital: T)
++ setVitals(vital: T)
++ getAlertLevel(): string
++ setAlertLevel(AlertLevel):void  
+--
+Responsibilities
+-- Resp1
+*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1470</x>
+      <y>102</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>Person
+--
+# _firstName:string
+# _lastName:string
+# _birthday:tm
+--
++ Person(firstName:string,
+lastName:string, birthday:tm)
+--
+Responsibilities
+-- Resp1
+*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1524</x>
+      <y>210</y>
+      <w>18</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1020</x>
+      <y>528</y>
+      <w>132</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>HospitalNotificationSystemFacade
+--
+
+--
++ sendAlertForPatient(p: Patient)
+--
+Responsibilities
+-- Resp1
+*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1188</x>
+      <y>528</y>
+      <w>132</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>GPNotificationSystemFacade
+--
+
+--
++ sendAlertForPatient(p: Patient)
+--
+Responsibilities
+-- Resp1
+*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1194</x>
+      <y>432</y>
+      <w>18</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1134</x>
+      <y>432</y>
+      <w>18</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>762</x>
+      <y>546</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>PatientDatabaseLoader
+--
+
+--
+
+--
+Responsibilities
+-- load data from facade </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>636</x>
+      <y>246</y>
+      <w>246</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>AbstractPatientDatabaseLoader
+--
+
+--
++ virtual void initialiseConnection() = 0;
++ virtual void loadPatients(std::vector&lt;Patient*&gt;&amp; patientIn) = 0;
++ 	virtual void closeConnection() = 0;
+--
+Responsibilities
+-- load data from patient database
+-- load data from patient text file</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>384</y>
+      <w>72</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0;100.0;90.0;100.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>876</x>
+      <y>312</y>
+      <w>246</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>390.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1524</x>
+      <y>384</y>
+      <w>42</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..1
+has v</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
