@@ -42,13 +42,13 @@
     <ClCompile Include="GPNotificationSystemFacade.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FileLoaderAdapter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AlertLevel.cpp">
+    <ClCompile Include="Strategy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Boneitis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Context.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Greyscale.cpp">
@@ -89,13 +89,13 @@
     <ClInclude Include="GPNotificationSystemFacade.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FileLoaderAdapter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AlertLevel.h">
+    <ClInclude Include="Strategy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Boneitis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Context.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Greyscale.h">

@@ -139,7 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Boneitis.cpp" />
+    <ClCompile Include="Context.cpp" />
     <ClCompile Include="GPNotificationSystemFacade.cpp" />
+    <ClCompile Include="Greyscale.cpp" />
     <ClCompile Include="HospitalAlertSystemFacade.cpp" />
     <ClCompile Include="Patient.cpp" />
     <ClCompile Include="PatientDatabaseLoader.cpp" />
@@ -147,11 +150,16 @@
     <ClCompile Include="PatientManagementSystem.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Person.cpp" />
+    <ClCompile Include="SimianFlu.cpp" />
+    <ClCompile Include="Strategy.cpp" />
     <ClCompile Include="Vitals.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AbstractPatientDatabaseLoader.h" />
+    <ClInclude Include="Boneitis.h" />
+    <ClInclude Include="Context.h" />
     <ClInclude Include="GPNotificationSystemFacade.h" />
+    <ClInclude Include="Greyscale.h" />
     <ClInclude Include="HospitalAlertSystemFacade.h" />
     <ClInclude Include="PatientAlertLevels.h" />
     <ClInclude Include="Patient.h" />
@@ -159,6 +167,8 @@
     <ClInclude Include="PatientFileLoader.h" />
     <ClInclude Include="PatientManagementSystem.h" />
     <ClInclude Include="Person.h" />
+    <ClInclude Include="SimianFlu.h" />
+    <ClInclude Include="Strategy.h" />
     <ClInclude Include="Vitals.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
