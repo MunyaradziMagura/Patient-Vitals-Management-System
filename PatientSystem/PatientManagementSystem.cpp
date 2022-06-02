@@ -10,6 +10,10 @@
 
 #include "GPNotificationSystemFacade.h"
 #include "HospitalAlertSystemFacade.h"
+#include "Context.h"
+#include "Boneitis.h"
+#include "Greyscale.h"
+#include "SimianFlu.h"
 
 using namespace std;
 
@@ -82,7 +86,7 @@ void PatientManagementSystem::addVitalsRecord()
 	printPatients();
 	cout << endl;
 	cout << "Enter the patient ID to declare vitals for > ";
-	
+
 	string pid { "" };
 	cin >> pid;
 	if (_patientLookup.count(pid)) {
@@ -90,7 +94,11 @@ void PatientManagementSystem::addVitalsRecord()
 		int bloodPressure;
 		int heartRate;
 		int respitoryRate;
-
+		auto lastname = _patientLookup[pid]->lastName();
+		auto firstname = _patientLookup[pid]->firstName();
+		auto id = _patientLookup[pid]->humanReadableID();
+		auto age = _patientLookup[pid]->age();
+		
 		cout << "enter body temperature: ";
 		cin >> bodyTemperature;
 		cout << "enter blood pressure: ";
@@ -99,9 +107,28 @@ void PatientManagementSystem::addVitalsRecord()
 		cin >> heartRate;
 		cout << "enter respitory rate: ";
 		cin >> respitoryRate;
-
+		
 		Vitals* v = new Vitals(bodyTemperature, bloodPressure, heartRate, respitoryRate);
 		_patientLookup[pid]->addVitals(v);
+
+		// if person has Boneitis
+		if (_patientLookup[pid]->primaryDiagnosis() == "Boneitis") {
+			Context context(new Boneitis(), bodyTemperature, bloodPressure, heartRate, respitoryRate, lastname, firstname, id, age, _patientLookup[pid]);
+			context.contextInterface();
+		}
+		// if person has Greyscale
+		if (_patientLookup[pid]->primaryDiagnosis() == "Greyscale") {
+			Context context(new Greyscale(), bodyTemperature, bloodPressure, heartRate, respitoryRate, lastname, firstname, id, age, _patientLookup[pid]);
+			context.contextInterface();
+		}
+		// if person has Simian Flu
+		if (_patientLookup[pid]->primaryDiagnosis() == "Simian Flu") {
+			Context context(new SimianFlu(), bodyTemperature, bloodPressure, heartRate, respitoryRate, lastname, firstname, id, age, _patientLookup[pid]);
+			context.contextInterface();
+		}
+
+		
+		
 	}
 	else {
 		cout << "Patient not found" << endl;
