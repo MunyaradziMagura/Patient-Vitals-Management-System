@@ -3,9 +3,12 @@
 
 #include <memory>
 #include <vector>
-
+#include <iostream>
+#include <iterator>
+#include <list>
+#include "Observer.h"
 #include "PatientAlertLevels.h"
-
+using namespace std;
 
 // forward declare classes
 class Vitals;
@@ -47,11 +50,16 @@ public:
 	void setAlertLevel(AlertLevel level);
 	const AlertLevel alertLevel() const { return _alertLevel; }
 
+	// observer functions
+	void subscribe(Observer* obs);
+	void unsubscribe(Observer* obs);
+	void notify();
+
 protected:
 	std::vector<std::string> _diagnosis;
 	std::vector<const Vitals*> _vitals;
 	AlertLevel _alertLevel;
-
+	std::list<Observer*> _observerList;
 	friend std::ostream& operator<<(std::ostream& os, const Patient& p);
 };
 

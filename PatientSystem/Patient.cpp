@@ -3,7 +3,9 @@
 #include <iomanip>
 #include <iostream>
 #include <sstream>
-
+#include <iostream>
+#include <iterator>
+#include <list>
 #include "Vitals.h"
 
 
@@ -95,5 +97,22 @@ void Patient::setAlertLevel(AlertLevel level)
 			break;
 		}
 		cout << endl;
+	}
+}
+
+void Patient::subscribe(Observer* obs)
+{
+	_observerList.push_back(obs);
+}
+
+void Patient::unsubscribe(Observer* obs)
+{
+	_observerList.remove(obs);
+}
+
+void Patient::notify()
+{
+	for (Observer* obs : _observerList) {
+		obs->alertChange(this);
 	}
 }

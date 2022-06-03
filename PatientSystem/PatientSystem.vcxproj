@@ -145,6 +145,7 @@
     <ClCompile Include="GPNotificationSystemFacade.cpp" />
     <ClCompile Include="Greyscale.cpp" />
     <ClCompile Include="HospitalAlertSystemFacade.cpp" />
+    <ClCompile Include="Observer.cpp" />
     <ClCompile Include="Patient.cpp" />
     <ClCompile Include="PatientDatabaseLoader.cpp" />
     <ClCompile Include="PatientFileLoader.cpp" />
@@ -163,6 +164,7 @@
     <ClInclude Include="GPNotificationSystemFacade.h" />
     <ClInclude Include="Greyscale.h" />
     <ClInclude Include="HospitalAlertSystemFacade.h" />
+    <ClInclude Include="Observer.h" />
     <ClInclude Include="PatientAlertLevels.h" />
     <ClInclude Include="Patient.h" />
     <ClInclude Include="PatientDatabaseLoader.h" />
