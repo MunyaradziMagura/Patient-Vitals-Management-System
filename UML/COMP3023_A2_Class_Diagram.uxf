@@ -121,8 +121,8 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2486</x>
-      <y>935</y>
+      <x>2772</x>
+      <y>968</y>
       <w>242</w>
       <h>209</h>
     </coordinates>
@@ -140,8 +140,8 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2805</x>
-      <y>935</y>
+      <x>2772</x>
+      <y>1221</y>
       <w>242</w>
       <h>209</h>
     </coordinates>
@@ -499,8 +499,8 @@ implements</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2651</x>
-      <y>1287</y>
+      <x>2420</x>
+      <y>1089</y>
       <w>242</w>
       <h>209</h>
     </coordinates>
@@ -517,8 +517,8 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2805</x>
-      <y>1232</y>
+      <x>2651</x>
+      <y>1353</y>
       <w>121</w>
       <h>44</h>
     </coordinates>
@@ -612,23 +612,34 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2585</x>
-      <y>1133</y>
-      <w>198</w>
-      <h>176</h>
+      <x>2651</x>
+      <y>1067</y>
+      <w>143</w>
+      <h>143</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>160.0;140.0;160.0;80.0;10.0;80.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;110.0;50.0;110.0;50.0;10.0;110.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2750</x>
-      <y>1133</y>
-      <w>187</w>
-      <h>176</h>
+      <x>2651</x>
+      <y>1177</y>
+      <w>143</w>
+      <h>165</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;140.0;10.0;80.0;150.0;80.0;150.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0;50.0;130.0;110.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2222</x>
+      <y>1177</y>
+      <w>220</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
   </element>
 </diagram>

@@ -71,7 +71,7 @@ const std::string& Patient::primaryDiagnosis() const
 void Patient::addVitals(const Vitals* v)
 {
 	_vitals.push_back(v);
-	// TODO: calculate alert levels
+
 }
 
 const std::vector<const Vitals*> Patient::vitals() const
@@ -98,6 +98,7 @@ void Patient::setAlertLevel(AlertLevel level)
 		}
 		cout << endl;
 	}
+	notify();
 }
 
 void Patient::subscribe(Observer* obs)

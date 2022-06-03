@@ -40,5 +40,6 @@ protected:
 
 	std::unique_ptr<AbstractPatientDatabaseLoader> _patientDatabaseLoader;
 
+
 };
 
