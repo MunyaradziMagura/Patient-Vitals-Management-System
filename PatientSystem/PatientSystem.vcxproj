@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Boneitis.cpp" />
     <ClCompile Include="Context.cpp" />
+    <ClCompile Include="FileLoaderAdapter.cpp" />
     <ClCompile Include="GPNotificationSystemFacade.cpp" />
     <ClCompile Include="Greyscale.cpp" />
     <ClCompile Include="HospitalAlertSystemFacade.cpp" />
@@ -158,6 +159,7 @@
     <ClInclude Include="AbstractPatientDatabaseLoader.h" />
     <ClInclude Include="Boneitis.h" />
     <ClInclude Include="Context.h" />
+    <ClInclude Include="FileLoaderAdapter.h" />
     <ClInclude Include="GPNotificationSystemFacade.h" />
     <ClInclude Include="Greyscale.h" />
     <ClInclude Include="HospitalAlertSystemFacade.h" />

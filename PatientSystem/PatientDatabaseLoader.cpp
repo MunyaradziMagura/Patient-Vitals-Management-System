@@ -5,6 +5,7 @@
 
 #include "Patient.h"
 #include "Vitals.h"
+#include "FileLoaderAdapter.h"
 
 
 void PatientDatabaseLoader::initialiseConnection()
@@ -29,6 +30,11 @@ void PatientDatabaseLoader::loadPatients(std::vector<Patient*>& patientIn){
     p->addVitals(v);
 
     patientIn.push_back(p);
+
+    FileLoaderAdapter loadme;
+
+    loadme.loadPatients(patientIn);
+    loadme.initialiseConnection();
 
 }
 
