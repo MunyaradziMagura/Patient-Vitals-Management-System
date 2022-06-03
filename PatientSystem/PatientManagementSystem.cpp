@@ -14,16 +14,22 @@
 #include "Boneitis.h"
 #include "Greyscale.h"
 #include "SimianFlu.h"
+#include "FileLoaderAdapter.h"
 
 using namespace std;
 
 
 PatientManagementSystem::PatientManagementSystem() :
 	_patientDatabaseLoader(std::make_unique<PatientDatabaseLoader>()),
+	_FileLoaderAdapter(std::make_unique<FileLoaderAdapter>()),
 	_hospitalAlertSystem(std::make_unique<HospitalAlertSystemFacade>()),
 	_gpNotificationSystem(std::make_unique<GPNotificationSystemFacade>())
 {
 	_patientDatabaseLoader->initialiseConnection();
+	_FileLoaderAdapter->loadPatients(_patients);
+	//auto strat1 = new PatientDatabaseLoader;
+	//auto strat2 = new FileLoaderAdapter;
+
 }
 
 PatientManagementSystem::~PatientManagementSystem()

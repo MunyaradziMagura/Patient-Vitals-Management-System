@@ -4,6 +4,7 @@
 #include <memory>
 #include <string>
 #include <vector>
+#include "Composite.h"
 
 
 // forward declare several classes
@@ -39,7 +40,13 @@ protected:
 	std::unique_ptr<GPNotificationSystemFacade> _gpNotificationSystem;
 
 	std::unique_ptr<AbstractPatientDatabaseLoader> _patientDatabaseLoader;
+	std::unique_ptr<AbstractPatientDatabaseLoader> _FileLoaderAdapter;
 
 
+	
+
+	Composite _Composite;
+
+	
 };
 

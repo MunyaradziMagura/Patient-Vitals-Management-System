@@ -30,12 +30,6 @@ void PatientDatabaseLoader::loadPatients(std::vector<Patient*>& patientIn){
     p->addVitals(v);
 
     patientIn.push_back(p);
-
-    FileLoaderAdapter loadme;
-
-    loadme.loadPatients(patientIn);
-    loadme.initialiseConnection();
-
 }
 
 void PatientDatabaseLoader::closeConnection()
