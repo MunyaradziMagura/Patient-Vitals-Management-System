@@ -8,4 +8,5 @@ void Greyscale::algorithmInterface(float bodyTemperature, int bloodPressure, int
     if (age >= 12 && heartRate > 100) { 
         p->setAlertLevel(AlertLevel::Red);
     }
+    p->setAlertLevel(AlertLevel::Green);
 }

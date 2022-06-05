@@ -11,4 +11,5 @@ void SimianFlu::algorithmInterface(float bodyTemperature, int bloodPressure, int
     if (bloodPressure > 110) { 
         p->setAlertLevel(AlertLevel::Yellow);
     }
+    p->setAlertLevel(AlertLevel::Green);
 }
