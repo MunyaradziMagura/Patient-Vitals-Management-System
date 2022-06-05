@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>1470</x>
-      <y>1150</y>
+      <y>980</y>
       <w>500</w>
       <h>270</h>
     </coordinates>
@@ -30,7 +30,7 @@ std::unique_ptr&lt;Composite&gt; _CompositeLoader;
     <id>UMLClass</id>
     <coordinates>
       <x>2150</x>
-      <y>1150</y>
+      <y>980</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
@@ -50,7 +50,7 @@ Responsibilities
     <id>Relation</id>
     <coordinates>
       <x>1960</x>
-      <y>1210</y>
+      <y>1040</y>
       <w>210</w>
       <h>40</h>
     </coordinates>
@@ -63,7 +63,7 @@ m2=0..*</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>2150</x>
-      <y>1430</y>
+      <y>1260</y>
       <w>210</w>
       <h>230</h>
     </coordinates>
@@ -88,7 +88,7 @@ Responsibilities
     <id>UMLClass</id>
     <coordinates>
       <x>2150</x>
-      <y>860</y>
+      <y>690</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
@@ -110,7 +110,7 @@ Responsibilities
     <id>Relation</id>
     <coordinates>
       <x>2240</x>
-      <y>1040</y>
+      <y>870</y>
       <w>30</w>
       <h>130</h>
     </coordinates>
@@ -120,46 +120,39 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2850</x>
-      <y>1050</y>
+      <x>2900</x>
+      <y>980</y>
       <w>220</w>
-      <h>190</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>HospitalNotificationSystemFacade
 --
 
 --
-+ sendAlertForPatient(p: Patient)
---
-Responsibilities
--- Resp1
-*-- Resp2*</panel_attributes>
++ sendAlertForPatient(p: Patient)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2850</x>
-      <y>1280</y>
+      <x>2900</x>
+      <y>1110</y>
       <w>220</w>
-      <h>190</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes>GPNotificationSystemFacade
 --
 
 --
 + sendAlertForPatient(p: Patient)
---
-Responsibilities
--- Resp1
-*-- Resp2*</panel_attributes>
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>970</x>
-      <y>1600</y>
+      <y>1430</y>
       <w>440</w>
       <h>140</h>
     </coordinates>
@@ -176,7 +169,7 @@ Responsibilities
     <id>UMLClass</id>
     <coordinates>
       <x>760</x>
-      <y>1160</y>
+      <y>990</y>
       <w>410</w>
       <h>130</h>
     </coordinates>
@@ -193,7 +186,7 @@ Responsibilities
     <id>Relation</id>
     <coordinates>
       <x>960</x>
-      <y>1280</y>
+      <y>1110</y>
       <w>120</w>
       <h>340</h>
     </coordinates>
@@ -204,7 +197,7 @@ Responsibilities
     <id>Relation</id>
     <coordinates>
       <x>1160</x>
-      <y>1210</y>
+      <y>1040</y>
       <w>330</w>
       <h>30</h>
     </coordinates>
@@ -215,7 +208,7 @@ Responsibilities
     <id>Relation</id>
     <coordinates>
       <x>2240</x>
-      <y>1330</y>
+      <y>1160</y>
       <w>70</w>
       <h>120</h>
     </coordinates>
@@ -228,7 +221,7 @@ has v</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>790</x>
-      <y>1280</y>
+      <y>1110</y>
       <w>130</w>
       <h>340</h>
     </coordinates>
@@ -239,7 +232,7 @@ has v</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>550</x>
-      <y>2220</y>
+      <y>2050</y>
       <w>210</w>
       <h>80</h>
     </coordinates>
@@ -252,7 +245,7 @@ patients.txt</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>640</x>
-      <y>2130</y>
+      <y>1960</y>
       <w>80</w>
       <h>110</h>
     </coordinates>
@@ -264,7 +257,7 @@ uses v</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>550</x>
-      <y>1800</y>
+      <y>1630</y>
       <w>210</w>
       <h>340</h>
     </coordinates>
@@ -296,7 +289,7 @@ uses v</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>640</x>
-      <y>1720</y>
+      <y>1550</y>
       <w>100</w>
       <h>100</h>
     </coordinates>
@@ -308,7 +301,7 @@ adaptee v</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>450</x>
-      <y>1600</y>
+      <y>1430</y>
       <w>440</w>
       <h>130</h>
     </coordinates>
@@ -326,7 +319,7 @@ adaptee v</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1200</x>
-      <y>1730</y>
+      <y>1560</y>
       <w>80</w>
       <h>160</h>
     </coordinates>
@@ -338,7 +331,7 @@ uses v</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1110</x>
-      <y>1870</y>
+      <y>1700</y>
       <w>210</w>
       <h>80</h>
     </coordinates>
@@ -351,7 +344,7 @@ facade</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1320</x>
-      <y>220</y>
+      <y>50</y>
       <w>250</w>
       <h>190</h>
     </coordinates>
@@ -367,7 +360,7 @@ facade</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1840</x>
-      <y>220</y>
+      <y>50</y>
       <w>250</w>
       <h>190</h>
     </coordinates>
@@ -383,7 +376,7 @@ facade</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1580</x>
-      <y>220</y>
+      <y>50</y>
       <w>250</w>
       <h>190</h>
     </coordinates>
@@ -399,7 +392,7 @@ facade</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1420</x>
-      <y>400</y>
+      <y>230</y>
       <w>300</w>
       <h>190</h>
     </coordinates>
@@ -411,7 +404,7 @@ facade</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1690</x>
-      <y>400</y>
+      <y>230</y>
       <w>290</w>
       <h>190</h>
     </coordinates>
@@ -422,7 +415,7 @@ facade</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1690</x>
-      <y>400</y>
+      <y>230</y>
       <w>30</w>
       <h>190</h>
     </coordinates>
@@ -433,7 +426,7 @@ facade</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>1270</x>
-      <y>170</y>
+      <y>0</y>
       <w>860</w>
       <h>920</h>
     </coordinates>
@@ -446,7 +439,7 @@ layer=-3</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1510</x>
-      <y>570</y>
+      <y>400</y>
       <w>400</w>
       <h>190</h>
     </coordinates>
@@ -462,7 +455,7 @@ layer=-3</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1690</x>
-      <y>1070</y>
+      <y>900</y>
       <w>30</w>
       <h>100</h>
     </coordinates>
@@ -473,7 +466,7 @@ layer=-3</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1710</x>
-      <y>500</y>
+      <y>330</y>
       <w>110</w>
       <h>40</h>
     </coordinates>
@@ -484,26 +477,23 @@ implements</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2530</x>
-      <y>1160</y>
-      <w>220</w>
-      <h>190</h>
+      <x>2490</x>
+      <y>1020</y>
+      <w>260</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>&lt;interface&gt; observer
 --
 
 --
-+ alertStakeholders(): void 
---
-Responsibilities
--- alert GP and hospital</panel_attributes>
+virtual void alertChange(Patient* p) = 0;</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>2740</x>
-      <y>1400</y>
+      <y>1090</y>
       <w>110</w>
       <h>40</h>
     </coordinates>
@@ -515,7 +505,7 @@ implements</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>2480</x>
-      <y>970</y>
+      <y>800</y>
       <w>700</w>
       <h>590</h>
     </coordinates>
@@ -528,7 +518,7 @@ layer=-2</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>10</x>
-      <y>1120</y>
+      <y>950</y>
       <w>530</w>
       <h>190</h>
     </coordinates>
@@ -546,7 +536,7 @@ std::vector&lt;std::shared_ptr&lt;AbstractPatientDatabaseLoader&gt;&gt; _method;
     <id>Relation</id>
     <coordinates>
       <x>1700</x>
-      <y>750</y>
+      <y>580</y>
       <w>30</w>
       <h>100</h>
     </coordinates>
@@ -557,7 +547,7 @@ std::vector&lt;std::shared_ptr&lt;AbstractPatientDatabaseLoader&gt;&gt; _method;
     <id>Relation</id>
     <coordinates>
       <x>530</x>
-      <y>1190</y>
+      <y>1020</y>
       <w>250</w>
       <h>30</h>
     </coordinates>
@@ -568,7 +558,7 @@ std::vector&lt;std::shared_ptr&lt;AbstractPatientDatabaseLoader&gt;&gt; _method;
     <id>Relation</id>
     <coordinates>
       <x>530</x>
-      <y>1240</y>
+      <y>1070</y>
       <w>250</w>
       <h>30</h>
     </coordinates>
@@ -579,7 +569,7 @@ std::vector&lt;std::shared_ptr&lt;AbstractPatientDatabaseLoader&gt;&gt; _method;
     <id>UMLClass</id>
     <coordinates>
       <x>1550</x>
-      <y>830</y>
+      <y>660</y>
       <w>310</w>
       <h>250</h>
     </coordinates>
@@ -605,40 +595,40 @@ std::vector&lt;std::shared_ptr&lt;AbstractPatientDatabaseLoader&gt;&gt; _method;
     <id>Relation</id>
     <coordinates>
       <x>2740</x>
-      <y>1140</y>
-      <w>130</w>
-      <h>130</h>
+      <y>1010</y>
+      <w>180</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;110.0;50.0;110.0;50.0;10.0;110.0;10.0</additional_attributes>
+    <additional_attributes>10.0;70.0;100.0;70.0;100.0;10.0;160.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>2740</x>
-      <y>1240</y>
-      <w>130</w>
-      <h>150</h>
+      <y>1070</y>
+      <w>180</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;50.0;10.0;50.0;130.0;110.0;130.0</additional_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0;100.0;80.0;160.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>2350</x>
-      <y>1240</y>
-      <w>200</w>
+      <y>1070</y>
+      <w>160</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>880</x>
-      <y>1660</y>
+      <y>1490</y>
       <w>110</w>
       <h>30</h>
     </coordinates>
@@ -649,7 +639,7 @@ std::vector&lt;std::shared_ptr&lt;AbstractPatientDatabaseLoader&gt;&gt; _method;
     <id>UMLNote</id>
     <coordinates>
       <x>410</x>
-      <y>1390</y>
+      <y>1220</y>
       <w>1020</w>
       <h>950</h>
     </coordinates>
@@ -662,7 +652,7 @@ layer=-6</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>0</x>
-      <y>1070</y>
+      <y>900</y>
       <w>1200</w>
       <h>280</h>
     </coordinates>
