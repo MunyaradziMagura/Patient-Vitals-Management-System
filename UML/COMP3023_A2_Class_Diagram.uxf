@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1570</x>
+      <x>1590</x>
       <y>980</y>
       <w>210</w>
       <h>270</h>
@@ -30,7 +30,7 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2170</x>
+      <x>2190</x>
       <y>980</y>
       <w>210</w>
       <h>190</h>
@@ -50,7 +50,7 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1770</x>
+      <x>1790</x>
       <y>1040</y>
       <w>420</w>
       <h>40</h>
@@ -63,7 +63,7 @@ m2=0..*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2170</x>
+      <x>2190</x>
       <y>1260</y>
       <w>210</w>
       <h>230</h>
@@ -88,7 +88,7 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2170</x>
+      <x>2190</x>
       <y>690</y>
       <w>210</w>
       <h>190</h>
@@ -110,7 +110,7 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2260</x>
+      <x>2280</x>
       <y>870</y>
       <w>30</w>
       <h>130</h>
@@ -121,7 +121,7 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2870</x>
+      <x>2890</x>
       <y>880</y>
       <w>220</w>
       <h>190</h>
@@ -140,7 +140,7 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2870</x>
+      <x>2890</x>
       <y>1110</y>
       <w>220</w>
       <h>190</h>
@@ -159,7 +159,7 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>990</x>
+      <x>1010</x>
       <y>1430</y>
       <w>440</w>
       <h>140</h>
@@ -176,7 +176,7 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
+      <x>800</x>
       <y>990</y>
       <w>410</w>
       <h>130</h>
@@ -187,15 +187,13 @@ Responsibilities
 --
 + virtual void initialiseConnection() = 0;
 + virtual void loadPatients(std::vector&lt;Patient*&gt;&amp; patientIn) = 0;
-+ 	virtual void closeConnection() = 0;
---
-</panel_attributes>
++ 	virtual void closeConnection() = 0;</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>980</x>
+      <x>1000</x>
       <y>1110</y>
       <w>120</w>
       <h>340</h>
@@ -206,7 +204,7 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1180</x>
+      <x>1200</x>
       <y>1040</y>
       <w>410</w>
       <h>30</h>
@@ -217,7 +215,7 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2260</x>
+      <x>2280</x>
       <y>1160</y>
       <w>70</w>
       <h>120</h>
@@ -230,7 +228,7 @@ has v</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>810</x>
+      <x>830</x>
       <y>1110</y>
       <w>130</w>
       <h>340</h>
@@ -241,7 +239,7 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>570</x>
+      <x>590</x>
       <y>2050</y>
       <w>210</w>
       <h>80</h>
@@ -254,7 +252,7 @@ patients.txt</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>660</x>
+      <x>680</x>
       <y>1960</y>
       <w>80</w>
       <h>110</h>
@@ -266,7 +264,7 @@ uses v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>570</x>
+      <x>590</x>
       <y>1630</y>
       <w>210</w>
       <h>340</h>
@@ -298,7 +296,7 @@ uses v</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>660</x>
+      <x>680</x>
       <y>1550</y>
       <w>100</w>
       <h>100</h>
@@ -310,7 +308,7 @@ adaptee v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>470</x>
+      <x>490</x>
       <y>1430</y>
       <w>440</w>
       <h>130</h>
@@ -328,7 +326,7 @@ adaptee v</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1220</x>
+      <x>1240</x>
       <y>1560</y>
       <w>80</w>
       <h>160</h>
@@ -340,7 +338,7 @@ uses v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1130</x>
+      <x>1150</x>
       <y>1700</y>
       <w>210</w>
       <h>80</h>
@@ -353,7 +351,7 @@ facade</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1300</x>
+      <x>1320</x>
       <y>50</y>
       <w>250</w>
       <h>190</h>
@@ -371,7 +369,7 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1820</x>
+      <x>1840</x>
       <y>50</y>
       <w>250</w>
       <h>190</h>
@@ -389,7 +387,7 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1560</x>
+      <x>1580</x>
       <y>50</y>
       <w>250</w>
       <h>190</h>
@@ -407,7 +405,7 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1400</x>
+      <x>1420</x>
       <y>230</y>
       <w>300</w>
       <h>190</h>
@@ -419,7 +417,7 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1670</x>
+      <x>1690</x>
       <y>230</y>
       <w>290</w>
       <h>190</h>
@@ -430,7 +428,7 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1670</x>
+      <x>1690</x>
       <y>230</y>
       <w>30</w>
       <h>190</h>
@@ -441,7 +439,7 @@ Responsibilities
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1260</x>
+      <x>1280</x>
       <y>0</y>
       <w>860</w>
       <h>920</h>
@@ -454,7 +452,7 @@ layer=-3</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1570</x>
+      <x>1590</x>
       <y>400</y>
       <w>210</w>
       <h>190</h>
@@ -473,7 +471,7 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1660</x>
+      <x>1680</x>
       <y>860</y>
       <w>30</w>
       <h>140</h>
@@ -484,7 +482,7 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1680</x>
+      <x>1700</x>
       <y>330</y>
       <w>110</w>
       <h>40</h>
@@ -496,7 +494,7 @@ implements</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2550</x>
+      <x>2570</x>
       <y>990</y>
       <w>220</w>
       <h>190</h>
@@ -514,7 +512,7 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2760</x>
+      <x>2780</x>
       <y>1230</y>
       <w>110</w>
       <h>40</h>
@@ -526,7 +524,7 @@ implements</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>2500</x>
+      <x>2520</x>
       <y>800</y>
       <w>700</w>
       <h>590</h>
@@ -539,25 +537,25 @@ layer=-2</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
+      <x>50</x>
       <y>950</y>
-      <w>210</w>
+      <w>530</w>
       <h>190</h>
     </coordinates>
     <panel_attributes>composite
 --
-
+std::vector&lt;std::shared_ptr&lt;AbstractPatientDatabaseLoader&gt;&gt; _method;
 --
-
---
-Responsibilities
-load from database </panel_attributes>
++ void addLoadMethod(std::shared_ptr&lt;AbstractPatientDatabaseLoader&gt; method);
++ virtual void initialiseConnection() override;
++ virtual void loadPatients(std::vector&lt;Patient*&gt;&amp; patientIn) override;
++ virtual void closeConnection() override; </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1660</x>
+      <x>1680</x>
       <y>580</y>
       <w>30</w>
       <h>120</h>
@@ -568,7 +566,7 @@ load from database </panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>550</x>
+      <x>570</x>
       <y>1020</y>
       <w>250</w>
       <h>30</h>
@@ -579,7 +577,7 @@ load from database </panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>550</x>
+      <x>570</x>
       <y>1070</y>
       <w>250</w>
       <h>30</h>
@@ -590,7 +588,7 @@ load from database </panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1570</x>
+      <x>1590</x>
       <y>680</y>
       <w>210</w>
       <h>190</h>
@@ -609,7 +607,7 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2760</x>
+      <x>2780</x>
       <y>970</y>
       <w>130</w>
       <h>130</h>
@@ -620,7 +618,7 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2760</x>
+      <x>2780</x>
       <y>1070</y>
       <w>130</w>
       <h>150</h>
@@ -631,7 +629,7 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2370</x>
+      <x>2390</x>
       <y>1070</y>
       <w>200</w>
       <h>30</h>
@@ -642,7 +640,7 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
+      <x>920</x>
       <y>1490</y>
       <w>110</w>
       <h>30</h>
@@ -653,13 +651,26 @@ Responsibilities
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>430</x>
+      <x>450</x>
       <y>1220</y>
       <w>1020</w>
       <h>950</h>
     </coordinates>
     <panel_attributes>Adapter Pattern
 bg=blue
+layer=-6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>40</x>
+      <y>900</y>
+      <w>1200</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>Composite Pattern
+bg=yellow
 layer=-6</panel_attributes>
     <additional_attributes/>
   </element>
