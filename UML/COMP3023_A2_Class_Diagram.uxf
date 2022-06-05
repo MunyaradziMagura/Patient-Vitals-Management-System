@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>11</zoom_level>
+  <zoom_level>4</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1342</x>
-      <y>1078</y>
-      <w>231</w>
-      <h>297</h>
+      <x>732</x>
+      <y>416</y>
+      <w>200</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>PatientManagementSystem
 --
+std::shared_ptr&lt;AbstractPatientDatabaseLoader&gt; _patientDatabaseLoader;
+std::shared_ptr&lt;AbstractPatientDatabaseLoader&gt; _FileLoaderAdapter;
+std::unique_ptr&lt;Composite&gt; _CompositeLoader;
 
 --
 + PatientManagementSystem()
@@ -20,20 +23,16 @@
 + addVitalsRecord()
 + printWelcomeMessage()
 + printMainMenu()
-+ printPatients()
---
-Responsibilities
--- Resp1
-*-- Resp2*</panel_attributes>
++ printPatients()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2002</x>
-      <y>1078</y>
-      <w>231</w>
-      <h>209</h>
+      <x>1004</x>
+      <y>416</y>
+      <w>84</w>
+      <h>76</h>
     </coordinates>
     <panel_attributes>Patient
 --
@@ -50,23 +49,23 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1562</x>
-      <y>1144</y>
-      <w>462</w>
-      <h>44</h>
+      <x>928</x>
+      <y>440</y>
+      <w>84</w>
+      <h>16</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m1=1 
 m2=0..*</panel_attributes>
-    <additional_attributes>10.0;10.0;400.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;190.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2002</x>
-      <y>1386</y>
-      <w>231</w>
-      <h>253</h>
+      <x>1004</x>
+      <y>528</y>
+      <w>84</w>
+      <h>92</h>
     </coordinates>
     <panel_attributes>Vitals
 --
@@ -88,10 +87,10 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2002</x>
-      <y>759</y>
-      <w>231</w>
-      <h>209</h>
+      <x>1004</x>
+      <y>300</y>
+      <w>84</w>
+      <h>76</h>
     </coordinates>
     <panel_attributes>Person
 --
@@ -110,10 +109,10 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2101</x>
-      <y>957</y>
-      <w>33</w>
-      <h>143</h>
+      <x>1040</x>
+      <y>372</y>
+      <w>12</w>
+      <h>52</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
@@ -121,66 +120,58 @@ Responsibilities
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2772</x>
-      <y>968</y>
-      <w>242</w>
-      <h>209</h>
+      <x>1304</x>
+      <y>416</y>
+      <w>88</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>HospitalNotificationSystemFacade
 --
 
 --
-+ sendAlertForPatient(p: Patient)
---
-Responsibilities
--- Resp1
-*-- Resp2*</panel_attributes>
++ sendAlertForPatient(p: Patient)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2772</x>
-      <y>1221</y>
-      <w>242</w>
-      <h>209</h>
+      <x>1304</x>
+      <y>468</y>
+      <w>88</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>GPNotificationSystemFacade
 --
 
 --
 + sendAlertForPatient(p: Patient)
---
-Responsibilities
--- Resp1
-*-- Resp2*</panel_attributes>
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>704</x>
-      <y>1573</y>
-      <w>231</w>
-      <h>209</h>
+      <x>532</x>
+      <y>596</y>
+      <w>176</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>PatientDatabaseLoader
 --
 
 --
-
---
-Responsibilities
--- load data from facade </panel_attributes>
++ virtual void initialiseConnection() override;
++ virtual void loadPatients(std::vector&lt;Patient*&gt;&amp; patientIn) override;
++ virtual void closeConnection() override;</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>473</x>
-      <y>1023</y>
-      <w>451</w>
-      <h>264</h>
+      <x>448</x>
+      <y>420</y>
+      <w>164</w>
+      <h>52</h>
     </coordinates>
     <panel_attributes>AbstractPatientDatabaseLoader
 --
@@ -188,42 +179,38 @@ Responsibilities
 --
 + virtual void initialiseConnection() = 0;
 + virtual void loadPatients(std::vector&lt;Patient*&gt;&amp; patientIn) = 0;
-+ 	virtual void closeConnection() = 0;
---
-Responsibilities
--- load data from patient database
--- load data from patient text file</panel_attributes>
++ 	virtual void closeConnection() = 0;</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>693</x>
-      <y>1276</y>
-      <w>132</w>
-      <h>319</h>
+      <x>528</x>
+      <y>468</y>
+      <w>48</w>
+      <h>136</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0;100.0;90.0;100.0;270.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0;100.0;140.0;100.0;320.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>913</x>
-      <y>1144</y>
-      <w>451</w>
-      <h>33</h>
+      <x>608</x>
+      <y>440</y>
+      <w>132</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>390.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>310.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2101</x>
-      <y>1276</y>
-      <w>77</w>
-      <h>132</h>
+      <x>1040</x>
+      <y>488</y>
+      <w>28</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..1
@@ -233,35 +220,34 @@ has v</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>506</x>
-      <y>1276</y>
-      <w>143</w>
-      <h>319</h>
+      <x>460</x>
+      <y>468</y>
+      <w>52</w>
+      <h>136</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>110.0;10.0;110.0;90.0;10.0;90.0;10.0;270.0</additional_attributes>
+    <additional_attributes>110.0;10.0;110.0;140.0;10.0;140.0;10.0;320.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>385</x>
-      <y>2167</y>
-      <w>231</w>
-      <h>88</h>
+      <x>364</x>
+      <y>844</y>
+      <w>84</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>PatientTextDatabase
 --
-Responsibilities
--- Stores patient data</panel_attributes>
+patients.txt</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>484</x>
-      <y>2068</y>
-      <w>88</w>
-      <h>121</h>
+      <x>400</x>
+      <y>808</y>
+      <w>32</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 uses v</panel_attributes>
@@ -270,150 +256,145 @@ uses v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>385</x>
-      <y>1870</y>
-      <w>231</w>
-      <h>209</h>
+      <x>364</x>
+      <y>676</y>
+      <w>84</w>
+      <h>136</h>
     </coordinates>
     <panel_attributes>PatientFileLoader
 --
-
+ vector&lt;Patient*&gt; patients{};
+ Patient* person = nullptr;
+ string id;
+ string lastname;
+ string firstname;
+ string DOB;
+ string disease;
+ string bodytemp;
+ string bloodpre;
+ string heartRate;
+ string respRate;
+ float bt{};
+ int bp{};
+ int hr{};
+ int rs{};
+ tm dateOfBirth;
+ string fileLine;
 --
-
---
-Responsibilities
--- Load data from file</panel_attributes>
++ std::vector&lt;Patient*&gt; loadPatientFile(const std::string&amp; file);
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>484</x>
-      <y>1771</y>
-      <w>33</w>
-      <h>121</h>
+      <x>400</x>
+      <y>644</y>
+      <w>40</w>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>517</x>
-      <y>1804</y>
-      <w>154</w>
-      <h>55</h>
-    </coordinates>
-    <panel_attributes>Adapter Pattern
-bg=blue</panel_attributes>
-    <additional_attributes/>
+    <panel_attributes>lt=-
+adaptee v</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>385</x>
-      <y>1573</y>
-      <w>231</w>
-      <h>209</h>
+      <x>324</x>
+      <y>596</y>
+      <w>176</w>
+      <h>52</h>
     </coordinates>
     <panel_attributes>FileLoaderAdapter
 --
-
+- PatientFileLoader* _PatientFileLoader;
 --
-
---
-Responsibilities
--- adapts patientFileLoader to 
-AbstractPatientDatabaseLoader</panel_attributes>
++ virtual void initialiseConnection() override;
++ virtual void loadPatients(std::vector&lt;Patient*&gt;&amp; patientIn) override;
++ virtual void closeConnection() override;
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>803</x>
-      <y>1771</y>
-      <w>88</w>
-      <h>121</h>
+      <x>624</x>
+      <y>648</y>
+      <w>32</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 uses v</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>704</x>
-      <y>1870</y>
-      <w>231</w>
-      <h>88</h>
+      <x>588</x>
+      <y>704</y>
+      <w>84</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>PatientDatabaseSubsystem
 --
-Responsibilities
--- Stores patient data</panel_attributes>
+facade</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1045</x>
-      <y>55</y>
-      <w>275</w>
-      <h>209</h>
+      <x>672</x>
+      <y>44</y>
+      <w>100</w>
+      <h>76</h>
     </coordinates>
     <panel_attributes>Boneitis
 --
 
 --
-+ alertLevel(vitals: T): string
---
-Responsibilities
--- calculate Boneitis alert status </panel_attributes>
++ ~Boneitis() {}
++ virtual void algorithmInterface(...)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1617</x>
-      <y>55</y>
-      <w>275</w>
-      <h>209</h>
+      <x>880</x>
+      <y>44</y>
+      <w>100</w>
+      <h>76</h>
     </coordinates>
     <panel_attributes>Simian Flu
 --
 
 --
-+ alertLevel(vitals: T): string
---
-Responsibilities
--- calculate Simian Flu alert status </panel_attributes>
++ ~SimianFlu() {}
++ virtual void algorithmInterface(...)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1331</x>
-      <y>55</y>
-      <w>275</w>
-      <h>209</h>
+      <x>776</x>
+      <y>44</y>
+      <w>100</w>
+      <h>76</h>
     </coordinates>
     <panel_attributes>Greyscale
 --
 
 --
-+ alertLevel(vitals: T): string
---
-Responsibilities
--- calculate Greyscale alert status </panel_attributes>
++ ~Greyscale() {}
++ virtual void algorithmInterface(...)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1155</x>
-      <y>253</y>
-      <w>330</w>
-      <h>209</h>
+      <x>712</x>
+      <y>116</y>
+      <w>120</w>
+      <h>76</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 </panel_attributes>
@@ -422,10 +403,10 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1452</x>
-      <y>253</y>
-      <w>319</w>
-      <h>209</h>
+      <x>820</x>
+      <y>116</y>
+      <w>116</w>
+      <h>76</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;170.0;10.0;90.0;270.0;90.0;270.0;10.0</additional_attributes>
@@ -433,21 +414,21 @@ Responsibilities
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1452</x>
-      <y>253</y>
-      <w>33</w>
-      <h>209</h>
+      <x>820</x>
+      <y>116</y>
+      <w>12</w>
+      <h>76</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;170.0;10.0;90.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;170.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1001</x>
-      <y>0</y>
-      <w>946</w>
-      <h>1012</h>
+      <x>652</x>
+      <y>24</y>
+      <w>344</w>
+      <h>368</h>
     </coordinates>
     <panel_attributes>Strategy Pattern
 bg=green
@@ -457,40 +438,37 @@ layer=-3</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1342</x>
-      <y>440</y>
-      <w>231</w>
-      <h>209</h>
+      <x>748</x>
+      <y>184</y>
+      <w>160</w>
+      <h>76</h>
     </coordinates>
     <panel_attributes>&lt;interface&gt; Strategy
 --
 
 --
-+ alertLevel(vitals: T): string
---
-Responsibilities
--- Resp1
-*-- Resp2*</panel_attributes>
++ virtual ~Strategy()
++ virtual void algorithmInterface(float bodyTemperature...) = 0</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1441</x>
-      <y>946</y>
-      <w>33</w>
-      <h>154</h>
+      <x>820</x>
+      <y>384</y>
+      <w>12</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1463</x>
-      <y>363</y>
-      <w>121</w>
-      <h>44</h>
+      <x>828</x>
+      <y>156</y>
+      <w>44</w>
+      <h>16</h>
     </coordinates>
     <panel_attributes>lw=0
 implements</panel_attributes>
@@ -499,28 +477,25 @@ implements</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2420</x>
-      <y>1089</y>
-      <w>242</w>
-      <h>209</h>
+      <x>1140</x>
+      <y>432</y>
+      <w>104</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>&lt;interface&gt; observer
 --
 
 --
-+ alertStakeholders(): void 
---
-Responsibilities
--- alert GP and hospital</panel_attributes>
+virtual void alertChange(Patient* p) = 0;</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2651</x>
-      <y>1353</y>
-      <w>121</w>
-      <h>44</h>
+      <x>1240</x>
+      <y>460</y>
+      <w>44</w>
+      <h>16</h>
     </coordinates>
     <panel_attributes>lw=0
 implements</panel_attributes>
@@ -529,10 +504,10 @@ implements</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>2365</x>
-      <y>880</y>
-      <w>770</w>
-      <h>649</h>
+      <x>1136</x>
+      <y>344</y>
+      <w>280</w>
+      <h>236</h>
     </coordinates>
     <panel_attributes>Observer Pattern
 bg=pink
@@ -542,39 +517,39 @@ layer=-2</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>1045</y>
-      <w>231</w>
-      <h>209</h>
+      <x>148</x>
+      <y>404</y>
+      <w>212</w>
+      <h>76</h>
     </coordinates>
     <panel_attributes>composite
 --
-
+std::vector&lt;std::shared_ptr&lt;AbstractPatientDatabaseLoader&gt;&gt; _method;
 --
-
---
-Responsibilities
-load from database </panel_attributes>
++ void addLoadMethod(std::shared_ptr&lt;AbstractPatientDatabaseLoader&gt; method);
++ virtual void initialiseConnection() override;
++ virtual void loadPatients(std::vector&lt;Patient*&gt;&amp; patientIn) override;
++ virtual void closeConnection() override; </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1441</x>
-      <y>638</y>
-      <w>33</w>
-      <h>132</h>
+      <x>824</x>
+      <y>256</y>
+      <w>12</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
-      <y>1122</y>
-      <w>275</w>
-      <h>33</h>
+      <x>356</x>
+      <y>432</y>
+      <w>100</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>230.0;10.0;10.0;10.0</additional_attributes>
@@ -582,10 +557,10 @@ load from database </panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
-      <y>1177</y>
-      <w>275</w>
-      <h>33</h>
+      <x>356</x>
+      <y>452</y>
+      <w>100</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;230.0;10.0</additional_attributes>
@@ -593,53 +568,97 @@ load from database </panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1342</x>
-      <y>748</y>
-      <w>231</w>
-      <h>209</h>
+      <x>764</x>
+      <y>288</y>
+      <w>124</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>&lt;interface&gt; Context
 --
-
+- Strategy* strategy;
+- Patient* _p;
+- float _bodyTemperature;
+- int _bloodPressure;
+- int _heartRate;
+- int _respitoryRate;
+- string _lastname;
+- string _firstname;
+- string _id;
+- int _age;
 --
-+ alertLevel(vitals: T): string
---
-Responsibilities
--- Resp1
-*-- Resp2*</panel_attributes>
++ Context(Strategy* const s,...) : strategy(s)
++ ~Context()
++ void contextInterface()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2651</x>
-      <y>1067</y>
-      <w>143</w>
-      <h>143</h>
+      <x>1240</x>
+      <y>428</y>
+      <w>72</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;110.0;50.0;110.0;50.0;10.0;110.0;10.0</additional_attributes>
+    <additional_attributes>10.0;70.0;100.0;70.0;100.0;10.0;160.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2651</x>
-      <y>1177</y>
-      <w>143</w>
-      <h>165</h>
+      <x>1240</x>
+      <y>452</y>
+      <w>72</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;50.0;10.0;50.0;130.0;110.0;130.0</additional_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0;100.0;80.0;160.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2222</x>
-      <y>1177</y>
-      <w>220</w>
-      <h>33</h>
+      <x>1084</x>
+      <y>452</y>
+      <w>64</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>496</x>
+      <y>620</y>
+      <w>44</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>308</x>
+      <y>512</y>
+      <w>408</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>Adapter Pattern
+bg=blue
+layer=-6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>144</x>
+      <y>384</y>
+      <w>480</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Composite Pattern
+bg=yellow
+layer=-6</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
