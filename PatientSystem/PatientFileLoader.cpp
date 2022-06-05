@@ -14,7 +14,23 @@ using namespace std;
 
 std::vector<Patient*> PatientFileLoader::loadPatientFile(const std::string& file)
 {
-
+    vector<Patient*> patients{};
+    Patient* person = nullptr;
+    string id;
+    string lastname;
+    string firstname;
+    string DOB;
+    string disease;
+    string bodytemp;
+    string bloodpre;
+    string heartRate;
+    string respRate;
+    float bt{};
+    int bp{};
+    int hr{};
+    int rs{};
+    tm dateOfBirth;
+    string fileLine;
     std::ifstream inFile(file);
     if (inFile.is_open()) {
 
