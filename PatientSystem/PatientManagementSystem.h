@@ -4,6 +4,7 @@
 #include <memory>
 #include <string>
 #include <vector>
+#include "Composite.h"
 
 
 // forward declare several classes
@@ -11,6 +12,7 @@ class AbstractPatientDatabaseLoader;
 class HospitalAlertSystemFacade;
 class GPNotificationSystemFacade;
 class Patient;
+class Composite;
 
 
 class PatientManagementSystem
@@ -38,7 +40,14 @@ protected:
 	std::unique_ptr<HospitalAlertSystemFacade> _hospitalAlertSystem;
 	std::unique_ptr<GPNotificationSystemFacade> _gpNotificationSystem;
 
-	std::unique_ptr<AbstractPatientDatabaseLoader> _patientDatabaseLoader;
+	//std::unique_ptr<AbstractPatientDatabaseLoader> _patientDatabaseLoader;
+	//std::unique_ptr<AbstractPatientDatabaseLoader> _FileLoaderAdapter;
 
+	// create composte
+	std::shared_ptr<AbstractPatientDatabaseLoader> _patientDatabaseLoader;
+	std::shared_ptr<AbstractPatientDatabaseLoader> _FileLoaderAdapter;
+	std::unique_ptr<Composite> _CompositeLoader;
+
+	
 };
 

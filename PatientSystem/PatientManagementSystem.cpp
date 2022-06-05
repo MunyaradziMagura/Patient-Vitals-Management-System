@@ -14,22 +14,36 @@
 #include "Boneitis.h"
 #include "Greyscale.h"
 #include "SimianFlu.h"
+#include "FileLoaderAdapter.h"
 
 using namespace std;
 
 
 PatientManagementSystem::PatientManagementSystem() :
-	_patientDatabaseLoader(std::make_unique<PatientDatabaseLoader>()),
+	//_patientDatabaseLoader(std::make_unique<PatientDatabaseLoader>()),
+	//_FileLoaderAdapter(std::make_unique<FileLoaderAdapter>()),
+	
+	// make shared pointers 
+	_patientDatabaseLoader(std::make_shared<PatientDatabaseLoader>()),
+	_FileLoaderAdapter(std::make_shared<FileLoaderAdapter>()),
+	_CompositeLoader(std::make_unique <Composite>()),
+	
+	// facades 
 	_hospitalAlertSystem(std::make_unique<HospitalAlertSystemFacade>()),
 	_gpNotificationSystem(std::make_unique<GPNotificationSystemFacade>())
 {
-	_patientDatabaseLoader->initialiseConnection();
+	//_patientDatabaseLoader->initialiseConnection();
+	//_FileLoaderAdapter->loadPatients(_patients);
+
+	// load patient database and file 
+	_CompositeLoader.get()->addLoadMethod(_patientDatabaseLoader);
+	_CompositeLoader.get()->addLoadMethod(_FileLoaderAdapter);	
 }
 
 PatientManagementSystem::~PatientManagementSystem()
 {
-	_patientDatabaseLoader->closeConnection();
-
+	//_patientDatabaseLoader->closeConnection();
+	_CompositeLoader.get()->closeConnection();
 	// clear patient memory
 	for (Patient* p : _patients) {
 		delete p;
@@ -38,13 +52,15 @@ PatientManagementSystem::~PatientManagementSystem()
 
 void PatientManagementSystem::init()
 {
-	_patientDatabaseLoader->loadPatients(_patients);
+	//_patientDatabaseLoader->loadPatients(_patients);
+	_CompositeLoader.get()->loadPatients(_patients);
 	for (Patient* p : _patients) {
 		_patientLookup[p->uid()] = p;
 	}
 
 	for (Patient* p : _patients) {
-		// TODO: do any processing you need here
+		p->subscribe(_hospitalAlertSystem.get());
+		p->subscribe(_gpNotificationSystem.get());
 	}
 }
 

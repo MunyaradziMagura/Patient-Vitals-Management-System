@@ -3,7 +3,9 @@
 #include <iomanip>
 #include <iostream>
 #include <sstream>
-
+#include <iostream>
+#include <iterator>
+#include <list>
 #include "Vitals.h"
 
 
@@ -69,7 +71,7 @@ const std::string& Patient::primaryDiagnosis() const
 void Patient::addVitals(const Vitals* v)
 {
 	_vitals.push_back(v);
-	// TODO: calculate alert levels
+
 }
 
 const std::vector<const Vitals*> Patient::vitals() const
@@ -95,5 +97,23 @@ void Patient::setAlertLevel(AlertLevel level)
 			break;
 		}
 		cout << endl;
+	}
+	notify();
+}
+
+void Patient::subscribe(Observer* obs)
+{
+	_observerList.push_back(obs);
+}
+
+void Patient::unsubscribe(Observer* obs)
+{
+	_observerList.remove(obs);
+}
+
+void Patient::notify()
+{
+	for (Observer* obs : _observerList) {
+		obs->alertChange(this);
 	}
 }
